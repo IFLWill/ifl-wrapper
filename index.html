@@ -32,10 +32,11 @@
   </style>
 
   <script>
-    // Immediately redirect to the Apps Script form
-    window.onload = function () {
-      window.location.href = "https://script.google.com/a/macros/isofishinglifestyle.com.au/s/AKfycbx6Vt0fr92dEDtJkoc0szeePjIkVnyk4Qv6WSpzvjMQ/dev";
-    };
+    // Force redirect to Safari if inside a PWA/home-screen standalone webview
+    if (window.navigator.standalone) {
+      window.location.href =
+        "https://script.google.com/macros/s/AKfycbx6Vt0fr92dEDtJkoc0szeePjIkVnyk4Qv6WSpzvjMQ/exec";
+    }
   </script>
 </head>
 <body>
