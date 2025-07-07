@@ -2,31 +2,42 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>IFL Custom Orders</title>
-  <meta name="theme-color" content="#f4d365" />
-  <meta name="description" content="Quick access to IFL Custom Order Form" />
   <link rel="icon" href="https://cdn.shopify.com/s/files/1/1243/6738/files/favicon_192_192.png?v=1751869518" type="image/png">
-  <link rel="apple-touch-icon" href="https://cdn.shopify.com/s/files/1/1243/6738/files/favicon_180_180.png?v=1751869535" />
-  <link rel="manifest" href="https://cdn.shopify.com/s/files/1/1243/6738/files/manifest.json?v=1751865738">
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-title" content="IFL Custom Orders" />
+  <meta name="theme-color" content="#f4d365">
   <style>
-    html, body {
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      height: 100vh;
       margin: 0;
-      padding: 0;
-      height: 100%;
-      background-color: #ffffff;
+      background: #fff;
     }
-    iframe {
+    img {
+      max-width: 160px;
+      margin-bottom: 20px;
+    }
+    button {
+      font-size: 18px;
+      padding: 12px 24px;
       border: none;
-      width: 100%;
-      height: 100%;
+      border-radius: 8px;
+      background-color: #f4d365;
+      color: #000;
+      cursor: pointer;
     }
   </style>
 </head>
 <body>
-  <iframe src="https://script.google.com/a/macros/isofishinglifestyle.com.au/s/AKfycbx6Vt0fr92dEDtJkoc0szeePjIkVnyk4Qv6WSpzvjMQ/dev" allowfullscreen></iframe>
+  <img src="https://cdn.shopify.com/s/files/1/1243/6738/files/IFL_Logo.png?v=1751857610" alt="IFL Logo">
+  <p>Tap below to open the form</p>
+  <button onclick="window.location.href='https://script.google.com/a/macros/isofishinglifestyle.com.au/s/AKfycbx6Vt0fr92dEDtJkoc0szeePjIkVnyk4Qv6WSpzvjMQ/dev';">
+    Open IFL Custom Orders
+  </button>
 </body>
 </html>
