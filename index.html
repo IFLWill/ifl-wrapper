@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>IFL Orders Launcher</title>
+  <title>IFL Launcher</title>
 
   <!-- PWA Manifest -->
   <link rel="manifest" href="https://cdn.shopify.com/s/files/1/1243/6738/files/manifest.json?v=1751865738">
@@ -12,7 +12,7 @@
   <link rel="icon" href="https://cdn.shopify.com/s/files/1/1243/6738/files/favicon_192_192.png?v=1751869518" type="image/png">
   <link rel="apple-touch-icon" href="https://cdn.shopify.com/s/files/1/1243/6738/files/favicon_180_180.png?v=1751869535">
   <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-title" content="IFL Custom Orders">
+  <meta name="apple-mobile-web-app-title" content="IFL Launcher">
   <meta name="theme-color" content="#f4d365">
 
   <!-- Fallback Styles -->
@@ -21,6 +21,7 @@
       margin: 0;
       padding: 0;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
       height: 100vh;
@@ -28,6 +29,7 @@
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       color: #000;
       text-align: center;
+      gap: 20px;
     }
     button {
       padding: 18px 32px;
@@ -36,6 +38,8 @@
       border: none;
       border-radius: 12px;
       cursor: pointer;
+      width: 80%;
+      max-width: 300px;
     }
     button:active {
       opacity: 0.8;
@@ -43,13 +47,22 @@
   </style>
 </head>
 <body>
-  <button id="openBtn">Open IFL Custom Orders</button>
+  <button id="customOrdersBtn">Open IFL Custom Orders</button>
+  <button id="reelRepairsBtn">Open IFL Reel Repair Form</button>
 
   <script>
-    // Force opening the Apps Script form in the external browser (Safari)
-    document.getElementById('openBtn').addEventListener('click', () => {
+    // Open Custom Orders
+    document.getElementById('customOrdersBtn').addEventListener('click', () => {
       window.open(
-        'https://script.google.com/macros/s/AKfycbxPkKt30arWZYbxV5dgc9pa0eaNhVg2epqZfUSMqfQSXM9RsKlskFgpFZbDxzYRjAuGKA/exec',
+        'https://script.google.com/a/macros/isofishinglifestyle.com.au/s/AKfycbx6Vt0fr92dEDtJkoc0szeePjIkVnyk4Qv6WSpzvjMQ/dev',
+        '_blank', 'noopener'
+      );
+    });
+
+    // Open Reel Repair Form
+    document.getElementById('reelRepairsBtn').addEventListener('click', () => {
+      window.open(
+        'https://script.google.com/macros/s/AKfycbxb61KYRjYZnbh0aLH9O1oGhlxj3NYqqfGxa9P9zFFo57esH73KZzY5bVnX3foflJJG/exec',
         '_blank', 'noopener'
       );
     });
