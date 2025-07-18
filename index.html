@@ -50,7 +50,9 @@
   <button id="customOrdersBtn">Custom Orders Form</button>
   <button id="customDashBtn">Custom Orders Dashboard</button>
   <button id="reelRepairsBtn">Reel Repair Form</button>
+  <button id="reelDashBtn">Reel Repair Dashboard</button>
   <button id="rodRepairsBtn">Rod Repair Form</button>
+  <button id="rodDashBtn">Rod Repair Dashboard</button>
 
   <script>
     // Custom Orders Form
@@ -76,9 +78,23 @@
         '_blank', 'noopener'
       );
     });
+    // Reel Repair Dashboard
+    document.getElementById('reelDashBtn').addEventListener('click', () => {
+      window.open(
+        'https://script.google.com/macros/s/AKfycbxb61KYRjYZnbh0aLH9O1oGhlxj3NYqqfGxa9P9zFFo57esH73KZzY5bVnX3foflJJG/exec',
+        '_blank', 'noopener'
+      );
+    });
 
-    // Rod Orders Form
+    // Rod Repair Form
     document.getElementById('rodRepairsBtn').addEventListener('click', () => {
+      window.open(
+        'https://script.google.com/macros/s/AKfycbwKorSiu5MMV20Ohxew2duWrb9FqhDkdGbJgJRqQytCNLbHhuAVMywnz8VRyJmr_vj2/exec',
+        '_blank', 'noopener'
+      );
+    });
+    // Rod Repair Dashboard
+    document.getElementById('rodDashBtn').addEventListener('click', () => {
       window.open(
         'https://script.google.com/macros/s/AKfycbwKorSiu5MMV20Ohxew2duWrb9FqhDkdGbJgJRqQytCNLbHhuAVMywnz8VRyJmr_vj2/exec',
         '_blank', 'noopener'
