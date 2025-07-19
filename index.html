@@ -1,106 +1,48 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>IFL Launcher</title>
+<script>
+  // Custom Orders Form
+  document.getElementById('customOrdersBtn').addEventListener('click', () => {
+    window.open(
+      'https://script.google.com/macros/s/AKfycbxPkKt30arWZYbxV5dgc9pa0eaNhVg2epqZfUSMqfQSXM9RsKlskFgpFZbDxzYRjAuGKA/exec',
+      '_blank', 'noopener'
+    );
+  });
 
-  <!-- PWA Manifest -->
-  <link rel="manifest" href="https://cdn.shopify.com/s/files/1/1243/6738/files/manifest.json?v=1751865738">
+  // Custom Orders Dashboard - Mobile/Desktop Aware
+  document.getElementById('customDashBtn').addEventListener('click', () => {
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const url = isMobile
+      ? 'https://script.google.com/a/macros/isofishinglifestyle.com.au/s/AKfycbxPkKt30arWZYbxV5dgc9pa0eaNhVg2epqZfUSMqfQSXM9RsKlskFgpFZbDxzYRjAuGKA/exec?view=mobile'
+      : 'https://script.google.com/a/macros/isofishinglifestyle.com.au/s/AKfycbxPkKt30arWZYbxV5dgc9pa0eaNhVg2epqZfUSMqfQSXM9RsKlskFgpFZbDxzYRjAuGKA/exec?page=search';
+    window.open(url, '_blank', 'noopener');
+  });
 
-  <!-- Icons & Theme -->
-  <link rel="icon" href="https://cdn.shopify.com/s/files/1/1243/6738/files/favicon_192_192.png?v=1751869518" type="image/png">
-  <link rel="apple-touch-icon" href="https://cdn.shopify.com/s/files/1/1243/6738/files/favicon_180_180.png?v=1751869535">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-title" content="IFL Launcher">
-  <meta name="theme-color" content="#f4d365">
+  // Reel Repair Form
+  document.getElementById('reelRepairsBtn').addEventListener('click', () => {
+    window.open(
+      'https://script.google.com/macros/s/AKfycbxb61KYRjYZnbh0aLH9O1oGhlxj3NYqqfGxa9P9zFFo57esH73KZzY5bVnX3foflJJG/exec',
+      '_blank', 'noopener'
+    );
+  });
+  // Reel Repair Dashboard
+  document.getElementById('reelDashBtn').addEventListener('click', () => {
+    window.open(
+      'https://script.google.com/macros/s/AKfycbxb61KYRjYZnbh0aLH9O1oGhlxj3NYqqfGxa9P9zFFo57esH73KZzY5bVnX3foflJJG/exec?page=dashboard',
+      '_blank', 'noopener'
+    );
+  });
 
-  <!-- Fallback Styles -->
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      background-color: #f4f4f4;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      color: #000;
-      text-align: center;
-      gap: 20px;
-    }
-    button {
-      padding: 18px 32px;
-      font-size: 20px;
-      background: #f4d365;
-      border: none;
-      border-radius: 12px;
-      cursor: pointer;
-      width: 80%;
-      max-width: 300px;
-    }
-    button:active {
-      opacity: 0.8;
-    }
-  </style>
-</head>
-<body>
-  <button id="customOrdersBtn">Custom Orders Form</button>
-  <button id="customDashBtn">Custom Orders Dashboard</button>
-  <button id="reelRepairsBtn">Reel Repair Form</button>
-  <button id="reelDashBtn">Reel Repair Dashboard</button>
-  <button id="rodRepairsBtn">Rod Repair Form</button>
-  <button id="rodDashBtn">Rod Repair Dashboard</button>
-
-  <script>
-    // Custom Orders Form
-    document.getElementById('customOrdersBtn').addEventListener('click', () => {
-      window.open(
-        'https://script.google.com/macros/s/AKfycbxPkKt30arWZYbxV5dgc9pa0eaNhVg2epqZfUSMqfQSXM9RsKlskFgpFZbDxzYRjAuGKA/exec',
-        '_blank', 'noopener'
-      );
-    });
-    
-    // Custom Orders Dashboard
-    document.getElementById('customDashBtn').addEventListener('click', () => {
-      window.open(
-        'https://script.google.com/macros/s/AKfycbxPkKt30arWZYbxV5dgc9pa0eaNhVg2epqZfUSMqfQSXM9RsKlskFgpFZbDxzYRjAuGKA/exec?page=search',
-        '_blank', 'noopener'
-      );
-    });
-
-    // Reel Repair Form
-    document.getElementById('reelRepairsBtn').addEventListener('click', () => {
-      window.open(
-        'https://script.google.com/macros/s/AKfycbxb61KYRjYZnbh0aLH9O1oGhlxj3NYqqfGxa9P9zFFo57esH73KZzY5bVnX3foflJJG/exec',
-        '_blank', 'noopener'
-      );
-    });
-    // Reel Repair Dashboard
-    document.getElementById('reelDashBtn').addEventListener('click', () => {
-      window.open(
-        'https://script.google.com/macros/s/AKfycbxb61KYRjYZnbh0aLH9O1oGhlxj3NYqqfGxa9P9zFFo57esH73KZzY5bVnX3foflJJG/exec?page=dashboard',
-        '_blank', 'noopener'
-      );
-    });
-
-    // Rod Repair Form
-    document.getElementById('rodRepairsBtn').addEventListener('click', () => {
-      window.open(
-        'https://script.google.com/macros/s/AKfycbwKorSiu5MMV20Ohxew2duWrb9FqhDkdGbJgJRqQytCNLbHhuAVMywnz8VRyJmr_vj2/exec',
-        '_blank', 'noopener'
-      );
-    });
-    // Rod Repair Dashboard
-    document.getElementById('rodDashBtn').addEventListener('click', () => {
-      window.open(
-        'https://script.google.com/macros/s/AKfycbwKorSiu5MMV20Ohxew2duWrb9FqhDkdGbJgJRqQytCNLbHhuAVMywnz8VRyJmr_vj2/exec?page=dashboard',
-        '_blank', 'noopener'
-      );
-    });
-    
-  </script>
-</body>
-</html>
+  // Rod Repair Form
+  document.getElementById('rodRepairsBtn').addEventListener('click', () => {
+    window.open(
+      'https://script.google.com/macros/s/AKfycbwKorSiu5MMV20Ohxew2duWrb9FqhDkdGbJgJRqQytCNLbHhuAVMywnz8VRyJmr_vj2/exec',
+      '_blank', 'noopener'
+    );
+  });
+  // Rod Repair Dashboard
+  document.getElementById('rodDashBtn').addEventListener('click', () => {
+    window.open(
+      'https://script.google.com/macros/s/AKfycbwKorSiu5MMV20Ohxew2duWrb9FqhDkdGbJgJRqQytCNLbHhuAVMywnz8VRyJmr_vj2/exec?page=dashboard',
+      '_blank', 'noopener'
+    );
+  });
+</script>
