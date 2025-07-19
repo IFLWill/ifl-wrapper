@@ -1,3 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>IFL Launcher</title>
+
+  <!-- PWA Manifest -->
+  <link rel="manifest" href="https://cdn.shopify.com/s/files/1/1243/6738/files/manifest.json?v=1751865738">
+
+  <!-- Icons & Theme -->
+  <link rel="icon" href="https://cdn.shopify.com/s/files/1/1243/6738/files/favicon_192_192.png?v=1751869518" type="image/png">
+  <link rel="apple-touch-icon" href="https://cdn.shopify.com/s/files/1/1243/6738/files/favicon_180_180.png?v=1751869535">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="IFL Launcher">
+  <meta name="theme-color" content="#f4d365">
+
+  <!-- Fallback Styles -->
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-color: #f4f4f4;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: #000;
+      text-align: center;
+      gap: 20px;
+    }
+    button {
+      padding: 18px 32px;
+      font-size: 20px;
+      background: #f4d365;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      width: 80%;
+      max-width: 300px;
+    }
+    button:active {
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+  <button id="customOrdersBtn">Custom Orders Form</button>
+  <button id="customDashBtn">Custom Orders Dashboard</button>
+  <button id="reelRepairsBtn">Reel Repair Form</button>
+  <button id="reelDashBtn">Reel Repair Dashboard</button>
+  <button id="rodRepairsBtn">Rod Repair Form</button>
+  <button id="rodDashBtn">Rod Repair Dashboard</button>
 <script>
   // Custom Orders Form
   document.getElementById('customOrdersBtn').addEventListener('click', () => {
@@ -46,3 +101,5 @@
     );
   });
 </script>
+</body>
+</html>
