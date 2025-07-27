@@ -54,18 +54,29 @@
   <button id="rodRepairsBtn">Rod Repair Form</button>
   <button id="rodDashBtn">Rod Repair Dashboard</button>
 <script>
+  function isMobileDevice() {
+    const ua = navigator.userAgent;
+    // Detect classic mobiles, iPad (old), iPhone, iPod, Android, etc
+    if (/Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(ua)) return true;
+    // Detect iPad (old user agent)
+    if (/iPad/i.test(ua)) return true;
+    // Detect iPadOS 13+ (pretends to be Mac, but is touch capable)
+    if (/Macintosh/i.test(ua) && navigator.maxTouchPoints && navigator.maxTouchPoints > 1) return true;
+    return false;
+  }
+
   // Custom Orders Form
   document.getElementById('customOrdersBtn').addEventListener('click', () => {
-  const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-  const url = isMobile
-    ? 'https://script.google.com/a/macros/isofishinglifestyle.com.au/s/AKfycbxPkKt30arWZYbxV5dgc9pa0eaNhVg2epqZfUSMqfQSXM9RsKlskFgpFZbDxzYRjAuGKA/exec'
-    : 'https://script.google.com/a/macros/isofishinglifestyle.com.au/s/AKfycbxPkKt30arWZYbxV5dgc9pa0eaNhVg2epqZfUSMqfQSXM9RsKlskFgpFZbDxzYRjAuGKA/exec?view=deskForm';
-  window.open(url, '_blank', 'noopener');
-});
-  
+    const isMobile = isMobileDevice();
+    const url = isMobile
+      ? 'https://script.google.com/a/macros/isofishinglifestyle.com.au/s/AKfycbxPkKt30arWZYbxV5dgc9pa0eaNhVg2epqZfUSMqfQSXM9RsKlskFgpFZbDxzYRjAuGKA/exec'
+      : 'https://script.google.com/a/macros/isofishinglifestyle.com.au/s/AKfycbxPkKt30arWZYbxV5dgc9pa0eaNhVg2epqZfUSMqfQSXM9RsKlskFgpFZbDxzYRjAuGKA/exec?view=deskForm';
+    window.open(url, '_blank', 'noopener');
+  });
+
   // Custom Orders Dashboard - Mobile/Desktop Aware
   document.getElementById('customDashBtn').addEventListener('click', () => {
-    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const isMobile = isMobileDevice();
     const url = isMobile
       ? 'https://script.google.com/a/macros/isofishinglifestyle.com.au/s/AKfycbxPkKt30arWZYbxV5dgc9pa0eaNhVg2epqZfUSMqfQSXM9RsKlskFgpFZbDxzYRjAuGKA/exec?view=mobile'
       : 'https://script.google.com/a/macros/isofishinglifestyle.com.au/s/AKfycbxPkKt30arWZYbxV5dgc9pa0eaNhVg2epqZfUSMqfQSXM9RsKlskFgpFZbDxzYRjAuGKA/exec?page=search';
@@ -79,6 +90,7 @@
       '_blank', 'noopener'
     );
   });
+
   // Reel Repair Dashboard
   document.getElementById('reelDashBtn').addEventListener('click', () => {
     window.open(
@@ -94,6 +106,7 @@
       '_blank', 'noopener'
     );
   });
+
   // Rod Repair Dashboard
   document.getElementById('rodDashBtn').addEventListener('click', () => {
     window.open(
